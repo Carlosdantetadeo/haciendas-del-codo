@@ -1,5 +1,6 @@
 import { WA_LINK } from './constants'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import Contacto from './components/Contacto'
 
 /* ─── Nav ─── */
 function Nav() {
@@ -730,6 +731,7 @@ export default function App() {
       <Precio />
       <Pasos />
       <Respaldo />
+      <Contacto />
       <CtaFinal />
       <Footer />
       <WhatsAppFloat />
