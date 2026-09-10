@@ -26,64 +26,55 @@ function Nav() {
 /* ─── Hero ─── */
 function Hero() {
   return (
-    <section
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        background:
-          'radial-gradient(ellipse at 30% 50%, rgba(74,140,98,.3) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,168,76,.15) 0%, transparent 50%), linear-gradient(135deg, #0f2a1c 0%, #1a3a2a 50%, #2d5a40 100%)',
-      }}
-    >
-      {/* Pattern */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234a8c62' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E\")",
-        }}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background photo */}
+      <img
+        src="/imgs/zoom_p9_1.jpeg"
+        alt="Vista aérea Haciendas del Codo"
+        className="absolute inset-0 w-full h-full object-cover object-right"
       />
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#f5f0e8] to-transparent" />
+      {/* Gradient overlay — más oscuro a la izquierda donde está el texto */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f14]/95 via-[#1a3a2a]/80 to-[#1a3a2a]/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f14]/60 via-transparent to-transparent" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 pt-28 pb-28 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#c9a84c]/15 border border-[#c9a84c]/40 text-[#e8c96a] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-          🌿 Solo 10 haciendas en prelanzamiento
-        </div>
-
-        <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
-          El privilegio<br />de vivir bien
-        </h1>
-
-        <p className="text-white/75 text-lg sm:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
-          5,000 m² en la Selva Central del Perú para vivir, producir, descansar o emprender.
-          Terrenos con plusvalía, respaldo legal y naturaleza pura.
-        </p>
-
-        <div className="flex items-center justify-center gap-3 mb-10 flex-wrap">
-          <span className="text-white/60">Desde</span>
-          <span className="font-display text-3xl font-bold text-[#c9a84c]">S/ 45,000</span>
-          <span className="text-white/30 hidden sm:inline">·</span>
-          <span className="text-white/70">Separa con S/ 2,000</span>
-        </div>
-
-        <div className="flex gap-4 justify-center flex-wrap">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-[#c9a84c] text-[#1a3a2a] font-semibold px-8 py-3.5 rounded-full hover:bg-[#e8c96a] hover:-translate-y-0.5 transition-all shadow-lg shadow-[#c9a84c]/25"
-          >
-            Quiero mi hacienda
-          </a>
-          <a
-            href="#proyecto"
-            className="text-white font-medium px-8 py-3.5 rounded-full border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
-          >
-            Ver el proyecto
-          </a>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-28 w-full">
+        <div className="max-w-xl">
+          <div className="inline-flex items-center gap-2 bg-[#c9a84c]/20 border border-[#c9a84c]/40 text-[#e8c96a] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+            🌿 Solo 10 haciendas en prelanzamiento
+          </div>
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-5">
+            El privilegio<br />de vivir bien
+          </h1>
+          <p className="text-white/80 text-lg sm:text-xl mb-8 leading-relaxed">
+            5,000 m² en la Selva Central del Perú para vivir, producir, descansar o emprender.
+            Terrenos con plusvalía, respaldo legal y naturaleza pura.
+          </p>
+          <div className="flex items-center gap-3 mb-10 flex-wrap">
+            <span className="text-white/60">Desde</span>
+            <span className="font-display text-3xl font-bold text-[#c9a84c]">S/ 45,000</span>
+            <span className="text-white/30">·</span>
+            <span className="text-white/70">Separa con S/ 2,000</span>
+          </div>
+          <div className="flex gap-4 flex-wrap">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#c9a84c] text-[#1a3a2a] font-semibold px-8 py-3.5 rounded-full hover:bg-[#e8c96a] hover:-translate-y-0.5 transition-all shadow-lg shadow-[#c9a84c]/25"
+            >
+              Quiero mi hacienda
+            </a>
+            <a
+              href="#proyecto"
+              className="text-white font-medium px-8 py-3.5 rounded-full border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
+            >
+              Ver el proyecto
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-6 inset-x-0 flex flex-col items-center gap-1 text-white/30 text-xs z-10">
+      <div className="absolute bottom-6 inset-x-0 flex flex-col items-center gap-1 text-white/40 text-xs z-10">
         <span>Desplaza para conocer</span>
         <span className="animate-bounce text-base">↓</span>
       </div>
@@ -169,15 +160,34 @@ function Proyecto() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-gradient-to-br from-[#1a3a2a] to-[#2d5a40] rounded-2xl p-12 text-center max-w-sm w-full shadow-xl">
-              <div className="text-6xl mb-6">🏔️</div>
-              <p className="text-white/80 text-lg leading-relaxed">
-                Terreno plano en Selva Central rodeado de montañas, ríos y naturaleza tropical
-              </p>
-            </div>
+          {/* Foto real del proyecto */}
+          <div className="rounded-2xl overflow-hidden shadow-xl h-[420px]">
+            <img
+              src="/imgs/zoom_p3_0.jpeg"
+              alt="Vista panorámica de la Selva Central desde Haciendas del Codo"
+              className="w-full h-full object-cover object-right"
+            />
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Divider naturaleza ─── */
+function NaturalezaDivider() {
+  return (
+    <section className="relative h-72 sm:h-96 overflow-hidden">
+      <img
+        src="/imgs/zoom_p7_0.jpeg"
+        alt="Naturaleza de Codo del Pozuzo — ríos, cascadas y biodiversidad"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[#1a3a2a]/55 flex flex-col items-center justify-center text-center px-6">
+        <p className="text-[#c9a84c] text-xs font-semibold uppercase tracking-[0.2em] mb-3">Naturaleza que se vive</p>
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-white max-w-xl">
+          Ríos, cascadas y biodiversidad en tu puerta
+        </h2>
       </div>
     </section>
   )
@@ -198,11 +208,20 @@ function Ubicacion() {
         <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white mb-3">
           Codo del Pozuzo, Huánuco
         </h2>
-        <p className="text-white/60 max-w-xl mb-12 leading-relaxed">
+        <p className="text-white/60 max-w-xl mb-10 leading-relaxed">
           Una ubicación privilegiada en la Selva Central del Perú con proyección de conectividad respaldada por ley.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-12 flex-wrap">
+        {/* Mapa de ruta */}
+        <div className="rounded-2xl overflow-hidden mb-10 shadow-xl">
+          <img
+            src="/imgs/zoom_p5_0.jpeg"
+            alt="Mapa de ruta Lima - Codo del Pozuzo - Haciendas del Codo"
+            className="w-full object-cover max-h-72"
+          />
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 flex-wrap">
           {ruta.flatMap((r, i) => {
             const card = (
               <div
@@ -246,17 +265,27 @@ function Infraestructura() {
     { n: '02', title: 'Alamedas', desc: 'Espacios naturales para caminar, relajarse y disfrutar del paisaje.' },
     { n: '03', title: 'Vías afirmadas', desc: 'Caminos acondicionados para facilitar el acceso y recorrido interno.' },
     { n: '04', title: 'Cerco perimétrico', desc: 'Delimitación del proyecto para mayor orden, privacidad y control.' },
-    { n: '05', title: 'Riachuelos naturales', desc: 'Un entorno privilegiado rodeado de agua, montañas, árboles y clima tropical.' },
-    { n: '06', title: 'Soluciones de campo', desc: 'Energía solar, abastecimiento de agua y biodigestor para una vida autosuficiente.' },
+    { n: '05', title: 'Riachuelos naturales', desc: 'Un entorno privilegiado rodeado de agua, montañas y clima tropical.' },
+    { n: '06', title: 'Soluciones de campo', desc: 'Energía solar, abastecimiento de agua y biodigestor para vida autosuficiente.' },
   ]
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">Infraestructura</p>
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-12">
+        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-8">
           Todo lo que hará más valiosa tu hacienda
         </h2>
+
+        {/* Foto aérea del proyecto real */}
+        <div className="rounded-2xl overflow-hidden shadow-lg mb-12 h-72 sm:h-96">
+          <img
+            src="/imgs/zoom_p9_1.jpeg"
+            alt="Vista aérea de Haciendas del Codo — acceso, río y haciendas"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((item) => (
             <div key={item.n} className="bg-white rounded-2xl p-6 border-l-4 border-[#4a8c62]">
@@ -265,6 +294,45 @@ function Infraestructura() {
               <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Master Plan ─── */
+function MasterPlan() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">Master Plan</p>
+        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
+          Elige tu ubicación
+        </h2>
+        <p className="text-gray-500 mb-8 max-w-xl leading-relaxed">
+          El proyecto se desarrolla en 3 etapas. La Etapa 1 cuenta con 43 lotes y la Etapa 2 con 68 lotes.
+          Elige tu hacienda en la etapa de prelanzamiento y asegura la mejor ubicación.
+        </p>
+        <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+          <img
+            src="/imgs/zoom_p17_0.jpeg"
+            alt="Master Plan Haciendas del Codo — distribución de lotes por etapas"
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="flex gap-6 mt-6 flex-wrap">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded bg-[#1a3a2a]" />
+            <span className="text-gray-600 text-sm">1° Etapa — 43 lotes</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded bg-[#4a8c62]" />
+            <span className="text-gray-600 text-sm">2° Etapa — 68 lotes</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded bg-gray-300" />
+            <span className="text-gray-600 text-sm">3° Etapa — Próximamente</span>
+          </div>
         </div>
       </div>
     </section>
@@ -281,8 +349,17 @@ function Posibilidades() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#f5f0e8]">
       <div className="max-w-6xl mx-auto px-6">
+        {/* Foto lifestyle */}
+        <div className="rounded-2xl overflow-hidden shadow-lg mb-12 h-64 sm:h-80">
+          <img
+            src="/imgs/zoom_p8_0.jpeg"
+            alt="Estilo de vida en Haciendas del Codo — vivir, producir, compartir"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+
         <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">
           Una propiedad, muchas posibilidades
         </p>
@@ -296,7 +373,7 @@ function Posibilidades() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="border border-gray-200 rounded-2xl p-7 text-center hover:border-[#4a8c62] hover:shadow-md hover:-translate-y-1 transition-all duration-200"
+              className="bg-white border border-gray-200 rounded-2xl p-7 text-center hover:border-[#4a8c62] hover:shadow-md hover:-translate-y-1 transition-all duration-200"
             >
               <div className="text-4xl mb-4">{item.emoji}</div>
               <h3 className="font-display text-xl font-semibold text-[#1a3a2a] mb-3">{item.title}</h3>
@@ -368,67 +445,78 @@ function Rentabilidad() {
 /* ─── Precio ─── */
 function Precio() {
   return (
-    <section id="precio" className="py-20 bg-[#f5f0e8]">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#c9a84c]/12 border border-[#c9a84c]/30 text-[#c9a84c] text-sm font-medium px-4 py-1.5 rounded-full mb-5">
-          🔥 Solo para los primeros 10 clientes
-        </div>
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-3">
-          Precio de Prelanzamiento
-        </h2>
-        <p className="text-gray-500 mb-12">
-          Sé uno de los primeros en asegurar tu ubicación y accede a condiciones exclusivas.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
-          {/* Contado */}
-          <div className="bg-white rounded-2xl p-8 border-2 border-[#c9a84c] shadow-lg shadow-[#c9a84c]/10">
-            <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-widest mb-2">Al contado</p>
-            <p className="font-display text-5xl font-bold text-gray-900 mb-1">S/ 45,000</p>
-            <p className="text-[#4a8c62] font-semibold text-sm mb-6">Ahorras S/ 5,000</p>
-            <ul className="text-left space-y-2 mb-8 text-sm text-gray-500">
-              <li>✓ S/ 5,000 de descuento</li>
-              <li>✓ Viaje de verificación incluido*</li>
-              <li>✓ Asesoría personalizada</li>
-            </ul>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="block w-full bg-[#c9a84c] text-[#1a3a2a] font-semibold py-3 rounded-full hover:bg-[#e8c96a] transition-colors text-center"
-            >
-              Separar ahora
-            </a>
+    <section id="precio" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Foto */}
+          <div className="rounded-2xl overflow-hidden shadow-xl h-[500px] order-2 lg:order-1">
+            <img
+              src="/imgs/zoom_p20_0.jpeg"
+              alt="Asesoría y firma de contrato Haciendas del Codo"
+              className="w-full h-full object-cover object-right"
+            />
           </div>
 
-          {/* Financiado */}
-          <div className="bg-white rounded-2xl p-8 border-2 border-gray-200">
-            <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-widest mb-2">Financiado</p>
-            <p className="font-display text-5xl font-bold text-gray-900 mb-1">S/ 50,000</p>
-            <p className="text-[#4a8c62] font-semibold text-sm mb-6">0% de interés</p>
-            <ul className="text-left space-y-2 mb-8 text-sm text-gray-500">
-              <li>✓ Cuotas sin intereses</li>
-              <li>✓ Viaje de verificación*</li>
-              <li>✓ Asesoría personalizada</li>
-            </ul>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="block w-full border-2 border-[#1a3a2a] text-[#1a3a2a] font-semibold py-3 rounded-full hover:bg-[#1a3a2a] hover:text-white transition-all text-center"
-            >
-              Separar ahora
-            </a>
+          {/* Contenido */}
+          <div className="order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 bg-[#c9a84c]/12 border border-[#c9a84c]/30 text-[#c9a84c] text-sm font-medium px-4 py-1.5 rounded-full mb-5">
+              🔥 Solo para los primeros 10 clientes
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-3">
+              Precio de Prelanzamiento
+            </h2>
+            <p className="text-gray-500 mb-8">
+              Sé uno de los primeros en asegurar tu ubicación y accede a condiciones exclusivas.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {/* Contado */}
+              <div className="bg-[#f5f0e8] rounded-2xl p-6 border-2 border-[#c9a84c]">
+                <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-widest mb-1">Al contado</p>
+                <p className="font-display text-4xl font-bold text-gray-900 mb-1">S/ 45,000</p>
+                <p className="text-[#4a8c62] font-semibold text-sm mb-4">Ahorras S/ 5,000</p>
+                <ul className="space-y-1.5 mb-5 text-sm text-gray-500">
+                  <li>✓ S/ 5,000 de descuento</li>
+                  <li>✓ Viaje de verificación*</li>
+                  <li>✓ Asesoría personalizada</li>
+                </ul>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full bg-[#c9a84c] text-[#1a3a2a] font-semibold py-2.5 rounded-full hover:bg-[#e8c96a] transition-colors text-center text-sm"
+                >
+                  Separar ahora
+                </a>
+              </div>
+              {/* Financiado */}
+              <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
+                <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-widest mb-1">Financiado</p>
+                <p className="font-display text-4xl font-bold text-gray-900 mb-1">S/ 50,000</p>
+                <p className="text-[#4a8c62] font-semibold text-sm mb-4">0% de interés</p>
+                <ul className="space-y-1.5 mb-5 text-sm text-gray-500">
+                  <li>✓ Cuotas sin intereses</li>
+                  <li>✓ Viaje de verificación*</li>
+                  <li>✓ Asesoría personalizada</li>
+                </ul>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full border-2 border-[#1a3a2a] text-[#1a3a2a] font-semibold py-2.5 rounded-full hover:bg-[#1a3a2a] hover:text-white transition-all text-center text-sm"
+                >
+                  Separar ahora
+                </a>
+              </div>
+            </div>
+
+            <div className="inline-flex items-center gap-3 bg-[#1a3a2a] rounded-full px-6 py-3 flex-wrap">
+              <span className="font-display text-xl font-bold text-[#c9a84c]">S/ 2,000</span>
+              <span className="text-white/70 text-sm">para reservar y elegir tu ubicación</span>
+            </div>
+            <p className="text-gray-400 text-xs mt-3">* Viaje de verificación para primeros compradores, sujeto a condiciones.</p>
           </div>
         </div>
-
-        <div className="inline-flex items-center gap-3 bg-[#1a3a2a] rounded-full px-8 py-3.5 flex-wrap justify-center">
-          <span className="font-display text-2xl font-bold text-[#c9a84c]">S/ 2,000</span>
-          <span className="text-white/70 text-sm">para reservar tu hacienda y elegir tu ubicación</span>
-        </div>
-        <p className="text-gray-400 text-xs mt-4">
-          * Viaje de verificación para primeros compradores, sujeto a condiciones.
-        </p>
       </div>
     </section>
   )
@@ -444,37 +532,47 @@ function Pasos() {
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">Así de simple</p>
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-16">
-          Tu camino hacia la hacienda
-        </h2>
-        <div className="flex flex-col sm:flex-row items-start justify-center gap-4 flex-wrap mb-14">
-          {pasos.flatMap((p, i) => {
-            const step = (
-              <div key={p.n} className="flex-1 min-w-[160px] max-w-[220px] text-center">
-                <div className="w-14 h-14 rounded-full bg-[#1a3a2a] flex items-center justify-center mx-auto mb-4">
-                  <span className="font-display text-xl font-bold text-[#c9a84c]">{p.n}</span>
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Pasos */}
+          <div>
+            <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">Así de simple</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-10">
+              Tu camino hacia la hacienda
+            </h2>
+            <div className="space-y-6 mb-10">
+              {pasos.map((p) => (
+                <div key={p.n} className="flex gap-5 items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#1a3a2a] flex items-center justify-center flex-shrink-0">
+                    <span className="font-display text-lg font-bold text-[#c9a84c]">{p.n}</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 text-lg mb-1">{p.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-lg">{p.title}</h4>
-                <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
-              </div>
-            )
-            if (i < pasos.length - 1) {
-              return [step, <span key={`a${i}`} className="text-[#4a8c62] text-2xl hidden sm:block pt-5">→</span>]
-            }
-            return [step]
-          })}
+              ))}
+            </div>
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block bg-[#c9a84c] text-[#1a3a2a] font-semibold text-lg px-10 py-4 rounded-full hover:bg-[#e8c96a] hover:-translate-y-0.5 transition-all"
+            >
+              Empezar ahora por WhatsApp
+            </a>
+          </div>
+
+          {/* Foto */}
+          <div className="rounded-2xl overflow-hidden shadow-xl h-[500px]">
+            <img
+              src="/imgs/zoom_p21_0.jpeg"
+              alt="Equipo revisando planos en el terreno de Haciendas del Codo"
+              className="w-full h-full object-cover object-left"
+            />
+          </div>
         </div>
-        <a
-          href={WA_LINK}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block bg-[#c9a84c] text-[#1a3a2a] font-semibold text-lg px-10 py-4 rounded-full hover:bg-[#e8c96a] hover:-translate-y-0.5 transition-all"
-        >
-          Empezar ahora por WhatsApp
-        </a>
       </div>
     </section>
   )
@@ -505,7 +603,7 @@ function Respaldo() {
   const garantias = ['Propiedad titulada en SUNARP', 'Empresa activa ante SUNAT', 'Minuta de compraventa', 'Constancia de no adeudo']
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-[0.15em] mb-3">Respaldo legal</p>
         <h2 className="font-display text-3xl sm:text-4xl font-semibold text-gray-900 mb-3">
@@ -516,7 +614,7 @@ function Respaldo() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
           {cards.map((c) => (
-            <div key={c.name} className="bg-white rounded-2xl p-6 shadow-sm">
+            <div key={c.name} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
               <div className="text-3xl mb-4">{c.icon}</div>
               <p className="text-[#4a8c62] text-xs font-semibold uppercase tracking-wider mb-2">{c.label}</p>
               <p className="font-semibold text-gray-900 mb-2">{c.name}</p>
@@ -541,15 +639,18 @@ function Respaldo() {
 /* ─── CTA Final ─── */
 function CtaFinal() {
   return (
-    <section
-      className="py-24"
-      style={{ background: 'linear-gradient(135deg, #1a3a2a 0%, #2d5a40 100%)' }}
-    >
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="font-display text-3xl sm:text-4xl font-semibold text-white mb-4 leading-tight">
+    <section className="relative py-28 overflow-hidden">
+      <img
+        src="/imgs/zoom_p1_0.jpeg"
+        alt="Tu hacienda en Codo del Pozuzo"
+        className="absolute inset-0 w-full h-full object-cover object-right"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f14]/95 via-[#1a3a2a]/85 to-[#1a3a2a]/40" />
+      <div className="relative z-10 max-w-3xl mx-auto px-6 text-left">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
           5,000 m² para sembrar tus sueños,<br />construir tu hogar y crear tu propio legado
         </h2>
-        <p className="text-white/65 text-lg mb-10 leading-relaxed">
+        <p className="text-white/65 text-lg mb-10 leading-relaxed max-w-xl">
           Quedan pocas haciendas de prelanzamiento. Habla con nosotros hoy y elige tu ubicación.
         </p>
         <a
@@ -620,8 +721,10 @@ export default function App() {
       <Hero />
       <Valores />
       <Proyecto />
+      <NaturalezaDivider />
       <Ubicacion />
       <Infraestructura />
+      <MasterPlan />
       <Posibilidades />
       <Rentabilidad />
       <Precio />
